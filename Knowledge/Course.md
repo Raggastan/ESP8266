@@ -15,3 +15,7 @@ The first one is run once at the startup of the board. It is used to initialize 
 the board... The second one is an infinite loop.
 Basically, it is like there is a `void main()` function in C++ with the first few lines
 being the setup() and a while(1) loop right after.
+
+## Language
+
+Don't you dare forgetting the semicolon again.
