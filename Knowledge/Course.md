@@ -20,6 +20,8 @@ being the setup() and a while(1) loop right after.
 I issued a error code 1 when uploading : I am on linux, I had to run `sudo chmod a+rw /dev/ttyUSB0`
 with `ttyUSB0` being the USB port where the board is plugged in.
 
+When you see an error stating a function is already define (most probably `setup()` or `loop()`), check wether there is an already existing file in the directory with a function called the same.
+
 ## Language
 
 Don't you dare forgetting the semicolon again.
