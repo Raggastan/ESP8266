@@ -25,3 +25,9 @@ When you see an error stating a function is already define (most probably `setup
 ## Language
 
 Don't you dare forgetting the semicolon again.
+
+## ESP8266 NodeMcu v3 board
+
+The blue onboard LED is always on the opposite state of the D4 pin. Meaning, 
+if you're D4 pin is set to LOW, the onboard LED will be set to HIGH and vice versa.
+The only workaround is to desolder the LED (don't do that)
