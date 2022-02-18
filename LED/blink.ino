@@ -1,4 +1,4 @@
-const int ledPin = 2;    // The LED is plugged on pin 2
+const int ledPin = 10;    // The LED is plugged on pin 2
 
 void setup() {
   pinMode(ledPin, OUTPUT);   // Just saying this is an output
