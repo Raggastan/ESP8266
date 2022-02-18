@@ -1,6 +1,6 @@
 {
     "board": "esp8266:esp8266:generic",
     "port": "/dev/ttyUSB0",
-    "sketch": "LED/Level 2/PIR_with_led.ino",
+    "sketch": "LED/Level 3/Control_over_wifi.ino",
     "output": "ArduinoBuild"
 }
