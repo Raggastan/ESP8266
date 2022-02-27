@@ -17,6 +17,7 @@ void loop() {
     if (WiFi.isConnected()) {
         digitalWrite(PIN_LED, HIGH);
         Serial.println("Connected");
+        Serial.println("IP Adress : " + WiFi.localIP().toString());
     }
     else {
         digitalWrite(PIN_LED, LOW);
