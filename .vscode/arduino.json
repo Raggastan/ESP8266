@@ -1,6 +1,6 @@
 {
     "board": "esp8266:esp8266:generic",
-    "port": "/dev/ttyUSB0",
+    "port": "COM1",
     "sketch": "Wifi/HelloWifi.ino",
     "output": "ArduinoBuild"
 }
