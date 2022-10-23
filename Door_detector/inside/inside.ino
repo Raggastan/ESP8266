@@ -2,13 +2,9 @@
 #include <ESP8266WiFi.h>
 #include <stdbool.h>
 
-#ifndef MOTION_SENSOR_PIN 10
 
 const char *ssid = "esp8266Wifi";
 const char *password = "M3@J;r5.-zX!n";
-
-bool motion_detected();
-void send_notification();
 
 void setup()
 {
