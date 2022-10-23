@@ -2,13 +2,13 @@
 #include <ESP8266WiFi.h>
 #include <stdbool.h>
 
-#ifndef MOTION_SENSOR_PIN 10
+#define MOTION_SENSOR_PIN 10
 
 const char *ssid = "esp8266Wifi";
 const char *password = "M3@J;r5.-zX!n";
 
 
-bool motion_detected();
+boolean motion_detected();
 void send_notification();
 
 void setup()
@@ -35,4 +35,32 @@ void setup()
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
   Serial.begin(115200);
+}
+
+void loop()
+{
+
+}
+
+boolean flag = true;
+
+bool motion_detected()
+{
+    if(digitalRead(MOTION_SENSOR_PIN) == HIGH)
+    {
+        // Turn LED on on the desk
+        if (flag)
+        {
+            // Notification on Telegram
+            flag = false;
+        }
+    }
+    else
+    {
+        if (!flag)
+        {
+            // Turn LED off on the desk
+            flag = true;
+        }
+    }
 }
