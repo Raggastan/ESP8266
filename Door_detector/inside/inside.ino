@@ -17,14 +17,19 @@ void setup()
   delay(10);
   Serial.println();
   Serial.println();
-  Serial.print("Connecting to ");
+  Serial.print("Starting WiFI access point ");
   Serial.println(ssid);
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
+  bool result = WiFi.softAP(ssid, password);
+  if (result==true)
+  {
+    IPAddress myIP = WiFi.softAPIP();
+    Serial.println("AP created");
+    Serial.print("Password : ");
+    Serial.println(password);
+  }
+  else
+  {
+    Serial.println("Something went wrong...");
   }
 }
 
