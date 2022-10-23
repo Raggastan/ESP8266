@@ -54,6 +54,7 @@ bool motion_detected()
             // Notification on Telegram
             flag = false;
         }
+        delay(200);
     }
     else
     {
